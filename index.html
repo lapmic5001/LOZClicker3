@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <title>3</title>
-        <link rel="icon" href="Images/LOZClicker3-logo">
+        <link rel="icon" type="image/x-icon" href="Images/LOZClicker3-logo" />
         <style>
             h1 {
                 font-family: cursive;
@@ -36,6 +36,8 @@
     </head>
     <body style="background-color: lightskyblue">
         <div id="mainmenu" class="step">
+            <br /><br />
+            <img src="Images/LOZClicker3-logo.png" height="200" width="200" />
             <b
                 ><p
                     style="
@@ -130,24 +132,17 @@
             </button>
         </div>
         <script>
-        var clicks = 0
-        var rupees = 0
-        var rpc = 1
-        var swordupgrade = 0
-        
-        function click() {
-            rupees = rupees + rpc
-            clicks = clicks + 1
-            
-            document.getElementById("rupees").innerHTML = rupees
-            
-            
-            
-        }
-            
-        
-        
-        
+            var clicks = 0;
+            var rupees = 0;
+            var rpc = 1;
+            var swordupgrade = 0;
+
+            function click() {
+                rupees = rupees + rpc;
+                clicks = clicks + 1;
+
+                document.getElementById("rupees").innerHTML = rupees;
+            }
         </script>
     </body>
 </html>
