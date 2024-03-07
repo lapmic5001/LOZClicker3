@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>3</title>
+        <link rel="icon" type="image/x-icon" href="Images/LOZClicker3-logo">
+        <style>
+            h1 {
+                font-family: cursive;
+                color: forestgreen;
+            }
+
+            html,
+            body {
+                height: 100%;
+                /* Disable Scroll */
+                overflow: hidden;
+            }
+
+            body {
+                background-color: forestgreen;
+                text-align: center;
+            }
+
+            div {
+                height: 100%;
+            }
+
+            .standardtext {
+                font-family: cursive;
+                font-weight: 300;
+            }
+        </style>
+        <link rel="icon" href="Images/" />
+        <script src="script.js"></script>
+    </head>
+    <body style="background-color: lightskyblue">
+        <div id="mainmenu" class="step">
+            <b
+                ><p
+                    style="
+                        font-size: 41px;
+                        font-family: cursive;
+                        color: forestgreen;
+                    ">
+                    Legend Of Zelda Clicker
+                </p>
+                <h1 style="font-size: 60px">3</h1></b
+            >
+            <button style="background-color: dodgerblue">
+                <a style="text-decoration: none" href="#clicker1"
+                    ><h1>PLAY!</h1></a
+                >
+            </button>
+            <br />
+            <br />
+            <button style="background-color: indianred">
+                <a style="text-decoration: none" href="#credits"
+                    ><h1>Credits</h1></a
+                >
+            </button>
+        </div>
+
+        <div id="credits" class="step">
+            <b> <h1 style="font-size: 60px">Credits</h1></b>
+            <h3>
+                Project Manager ... lapmic5001<br />
+                Main Scripter ... lapmic5001<br />
+                Asset Gathering ... lapmic5001<br />
+                Button Work ... lapmic5001<br />
+                Code Manager ... lapmic5001<br />
+                Lead Procrastinator ... lapmic5001<br />
+            </h3>
+            <button style="background-color: indianred">
+                <a href="#mainmenu"><h1>Back</h1></a>
+            </button>
+        </div>
+
+        <div id="clicker1" class="step">
+            <h1>Legend Of Zelda Clicker</h1>
+
+            <img
+                onclick="click()"
+                src="Images/link.jpeg"
+                height="150"
+                width="150" />
+            <p class="standardtext">Rupees: <span id="rupees">0</span></p>
+            <hr />
+            <h1>Shop</h1>
+            <button onclick="buyClickup()" style="background-color: white">
+                <p style="font-family: cursive">Better Sword</p>
+                <hr />
+                <p style="font-family: cursive">
+                    Cost: <span id="clickupCost">10</span>
+                </p>
+                <p style="font-family: cursive">
+                    Amount: <span id="clickupsDisplay">0</span>
+                </p>
+                <img
+                    src="Images/mastersword.jpeg"
+                    alt="sword.png"
+                    width="100"
+                    height="100" />
+                <hr />
+                <p>
+                    Increase Your<br />
+                    Click Power<br />(+1)
+                </p>
+            </button>
+
+            <button onclick="buyClickup()" style="background-color: white">
+                <p style="font-family: cursive">Better Sword</p>
+                <hr />
+                <p style="font-family: cursive">
+                    Cost: <span id="clickupCost">10</span>
+                </p>
+                <p style="font-family: cursive">
+                    Amount: <span id="clickupsDisplay">0</span>
+                </p>
+                <img
+                    src="Images/mastersword.jpeg"
+                    alt="sword.png"
+                    width="100"
+                    height="100" />
+                <hr />
+                <p>
+                    Increase Your<br />
+                    Click Power<br />(+1)
+                </p>
+            </button>
+        </div>
+        <script>
+        var clicks = 0
+        var rupees = 0
+        var rpc = 1
+        var swordupgrade = 0
+        
+        function click() {
+            rupees = rupees + rpc
+            clicks = clicks + 1
+            
+            ??????ZXzx
+            
+            
+            
+        }
+            
+        
+        
+        
+        </script>
+    </body>
+</html>
