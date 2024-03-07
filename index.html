@@ -14,7 +14,7 @@
             body {
                 height: 100%;
                 /* Disable Scroll */
-                overflow: none;
+                overflow: hidden;
             }
 
             body {
@@ -85,30 +85,24 @@
             <h1>Legend Of Zelda Clicker</h1>
 
             <img
-                onclick="click()"
-                src="Images/link.jpeg"
-                height="150;"
-                width="150;" />
+                src="Images/LOZClicker3-logo.png"
+                alt="no"
+                height="200"
+                width="200"
+                onclick="clickLink()" />
             <p class="standardtext">Rupees: <span id="rupees">0</span></p>
             <hr />
             <h1>Shop</h1>
-            
         </div>
 
         <script>
-            var clicks = 0;
             var rupees = 0;
             var rpc = 1;
-            var swordupgrade = 0;
 
-            function click() {
-            rupees = rupees + rpc;
-            document.getElementById("rupees").innerHTML = rupees;
-            document.getElementById("ppc").innerHTML = clickups;
-            
-        }
-            
+            function clickLink() {
+                rupees = rupees + rpc;
+                document.getElementById("rupees").innerHTML = rupees;
+            }
         </script>
     </body>
 </html>
-
