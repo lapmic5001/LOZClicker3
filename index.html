@@ -35,6 +35,7 @@
         <script src="script.js"></script>
     </head>
     <body style="background-color: lightskyblue">
+        <!--MAIN MENU-->
         <div id="mainmenu" class="step">
             <br /><br />
             <img src="Images/LOZClicker3-logo.png" height="150" width="150" />
@@ -63,6 +64,7 @@
             </button>
         </div>
 
+        <!--CREDITS-->
         <div id="credits" class="step">
             <b> <h1 style="font-size: 60px">Credits</h1></b>
             <h3>
@@ -78,15 +80,16 @@
             </button>
         </div>
 
+        <!--CLICKING LINK-->
         <div id="clicker1" class="step">
             <h1>Legend Of Zelda Clicker</h1>
 
             <img
                 onclick="click()"
                 src="Images/link.jpeg"
-                height="150"
-                width="150" />
-            <p class="standardtext">Rupees: <span id="rupees">0</span></p>
+                height="150;"
+                width="150;" />
+            <p class="standardtext">Rupees: <span id="amount-of-rupees">0</span></p>
             <hr />
             <h1>Shop</h1>
             <button onclick="buyClickup()" style="background-color: white">
@@ -131,6 +134,7 @@
                 </p>
             </button>
         </div>
+
         <script>
             var clicks = 0;
             var rupees = 0;
@@ -138,11 +142,13 @@
             var swordupgrade = 0;
 
             function click() {
-                rupees = rupees + rpc;
-                clicks = clicks + 1;
-
-                document.getElementById("rupees").innerHTML = rupees;
-            }
+            rupees = rupees + rpc;
+            document.getElementById("rupees").innerHTML = rupees;
+            document.getElementById("ppc").innerHTML = clickups;
+            
+        }
+            
         </script>
     </body>
 </html>
+
