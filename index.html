@@ -2,8 +2,8 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <title>3</title>
-        <link rel="icon" type="image/x-icon" href="Images/LOZClicker3-logo" />
+        <title>LOZC3</title>
+        <link rel="icon" href="Images/LOZClicker3-logo" />
         <style>
             h1 {
                 font-family: cursive;
@@ -28,17 +28,18 @@
 
             .standardtext {
                 font-family: cursive;
-                font-weight: 300;
             }
         </style>
-        <link rel="icon" href="Images/" />
-        <script src="script.js"></script>
     </head>
     <body style="background-color: lightskyblue">
         <!--MAIN MENU-->
         <div id="mainmenu" class="step">
-            <br /><br />
-            <img src="Images/LOZClicker3-logo.png" height="150" width="150" />
+            <p style="font-size: 15px">fullscreen reccomended</p><br />
+            <img
+                alt="logo image"
+                src="Images/LOZClicker3-logo.png"
+                height="150"
+                width="150" />
             <b
                 ><p
                     style="
@@ -50,18 +51,21 @@
                 </p>
                 <h1 style="font-size: 60px">3</h1></b
             >
-            <button style="background-color: dodgerblue">
-                <a style="text-decoration: none" href="#clicker1"
-                    ><h1>PLAY!</h1></a
-                >
-            </button>
+
+            <a style="text-decoration: none" href="#clicker1"
+                ><button style="background-color: dodgerblue">
+                    <h1>PLAY!</h1>
+                </button></a
+            >
+
             <br />
             <br />
-            <button style="background-color: indianred">
-                <a style="text-decoration: none" href="#credits"
-                    ><h1>Credits</h1></a
-                >
-            </button>
+
+            <a style="text-decoration: none" href="#credits"
+                ><button style="background-color: indianred">
+                    <h1>Credits</h1>
+                </button></a
+            >
         </div>
 
         <!--CREDITS-->
@@ -75,34 +79,100 @@
                 Code Manager ... lapmic5001<br />
                 Lead Procrastinator ... lapmic5001<br />
             </h3>
-            <button style="background-color: indianred; text-decoration: none">
-                <a href="#mainmenu"><h1>Back</h1></a>
-            </button>
+            <a href="#mainmenu"
+                ><button
+                    style="background-color: indianred; text-decoration: none">
+                    <h1>Back</h1>
+                </button></a
+            >
         </div>
 
         <!--CLICKING LINK-->
         <div id="clicker1" class="step">
+            <hr />
             <h1>Legend Of Zelda Clicker</h1>
 
             <img
-                src="Images/LOZClicker3-logo.png"
-                alt="no"
+                src="Images/link.jpeg"
+                alt="link image"
                 height="200"
                 width="200"
                 onclick="clickLink()" />
-            <p class="standardtext">Rupees: <span id="rupees">0</span></p>
-            <hr />
+            <p class="standardtext">
+                Rupees: <span id="rupees">0</span> | Rupees Per Click:
+                <span id="rpc">1</span> | Total Clicks: <span id="totalClicks">0</span>
+            </p>
+
             <h1>Shop</h1>
+            <button
+                style="background-color: cornflowerblue"
+                onclick="swordUp()">
+                <h2 class="standardtext">Sword Upgrade</h2>
+                <p>give Link a better sword</p>
+                <img src="Images/mastersword.jpeg" height="90" width="90" />
+                <p class="standardtext">Amount: <span id="swordUps">0</span></p>
+                <p>Cost: <span id="swordUpCost">10</span> Rupees</p>
+            </button>
+            <a href="#clicker2"><button
+                style="background-color: cornflowerblue"
+                onclick="changeToZelda()">
+                <h2 class="standardtext">Click Zelda</h2>
+                <p>You can click Zelda now</p>
+                <img src="Images/mastersword.jpeg" height="90" width="90" />
+                <p class="standardtext">(more upgrades)</p>
+                <p>Cost: 100 Clicks</p>
+            </button></a>
+            <a href="#mainmenu"
+                ><button style="background-color: cornflowerblue">
+                    <h2 class="standardtext">Go to Main Menu</h2>
+                    <p>_</p>
+                    <img src="Images/mastersword.jpeg" height="90" width="90" />
+                    <p class="standardtext">_</p>
+                    <p>_</p>
+                </button></a
+            >
+        </div>
+        
+        <div id="clicker2">
+        
+        <h1>skibapdabap</h1>
+        
         </div>
 
         <script>
             var rupees = 0;
             var rpc = 1;
+            var swordUps = 0;
+            var swordUpCost = 10;
+            var totalClicks = 0;
 
             function clickLink() {
                 rupees = rupees + rpc;
+                totalClicks = totalClicks + 1
                 document.getElementById("rupees").innerHTML = rupees;
+                document.getElementById("totalClicks").innerHTML = totalClicks
             }
+
+            function swordUp() {
+                if (rupees >= swordUpCost) {
+                    swordUps = swordUps + 1;
+                    rpc = rpc + 1;
+                    rupees = rupees - swordUpCost;
+                    swordUpCost = swordUpCost + 5;
+                }
+
+                document.getElementById("rupees").innerHTML = rupees;
+                document.getElementById("swordUps").innerHTML = swordUps;
+                document.getElementById("swordUpCost").innerHTML = swordUpCost;
+                document.getElementById("rpc").innerHTML = rpc;
+            }
+            
+            function changeToZelda() {
+                
+            }
+            
+            
+            
         </script>
     </body>
 </html>
